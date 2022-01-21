@@ -19,7 +19,7 @@ on:
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
-        default: 'https://github.com/MlgmXyysd/android_device_duoqin_k61v1.git'
+        default: 'https://github.com/willwex/twrp_device_oppo_lahaina.git'
       DEVICE_BRANCH:
         description: 'DEVICE_BRANCH'
         required: true
@@ -27,11 +27,11 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/duoqin/k61v1'
+        default: 'device/qualcomm/lahaina'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'k61v1'
+        default: 'lahaina'
 
 jobs:
   build:
@@ -81,13 +81,13 @@ jobs:
       run: |
         PATH=~/bin:$PATH
         cd ${{ steps.pwd.outputs.pwd }}
-        wget https://github.com/Xpsoted/recovery_device_xiaomi_ares/releases/download/1/k61v1.zip
+        wget https://github.com/willwex/twrp_device_oppo_lahaina/archive/refs/tags/lahaina.zip
         cd device
-        mkdir duoqin
+        mkdir qualcomm
         cd ..
-        mv k61v1.zip device/duoqin/
-        unzip device/duoqin/k61v1.zip
-        rm -rf device/duoqin/k61v1.zip
+        mv lahaina.zip device/qualcomm/
+        unzip device/qualcomm/lahaina.zip
+        rm -rf device/qualcomm/lahaina.zip
 
     - name: Building
       run: |
