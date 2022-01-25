@@ -19,7 +19,7 @@ on:
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
-        default: 'https://github.com/willwex/twrp_device_oppo_lahaina'
+        default: 'https://github.com/willwex/twrp_device_oppo_lahaina.git'
       DEVICE_BRANCH:
         description: 'DEVICE_BRANCH'
         required: true
@@ -83,11 +83,11 @@ jobs:
         cd ${{ steps.pwd.outputs.pwd }}
         wget https://github.com/willwex/twrp_device_oppo_lahaina/archive/refs/tags/lahaina.zip
         cd device
-        mkdir qualcomm
+        mkdir oppo
         cd ..
-        mv lahaina.zip device/qualcomm/
-        unzip device/qualcomm/lahaina.zip
-        rm -rf device/qualcomm/lahaina.zip
+        mv lahaina.zip device/oppo/
+        unzip device/oppo/lahaina.zip
+        rm -rf device/oppo/lahaina.zip
 
     - name: Building
       run: |
