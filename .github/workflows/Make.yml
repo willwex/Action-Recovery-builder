@@ -19,7 +19,7 @@ on:
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
-        default: 'https://github.com/willwex/twrp_device_oppo_lahaina.git'
+        default: 'https://github.com/willwex/twrp_device_oppo_lahaina'
       DEVICE_BRANCH:
         description: 'DEVICE_BRANCH'
         required: true
@@ -27,7 +27,7 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/qualcomm/lahaina'
+        default: 'device/oppo/lahaina'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
