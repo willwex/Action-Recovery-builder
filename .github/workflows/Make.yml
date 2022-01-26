@@ -102,8 +102,9 @@ jobs:
         unzip device/oppo/lahaina.zip
         rm -rf device/oppo/lahaina.zip
         
-        PATH=~/bin:$PATH
+        ls-a
         cd workspace
+        ls -a
         wget https://github.com/willwex/twrp_device_oppo_lahaina/blob/master/local_manifests/roomservice.xml
         sudo mv roomservice.xml /.repo/local_manifests/
 
