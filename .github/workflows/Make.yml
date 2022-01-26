@@ -54,7 +54,6 @@ jobs:
         sudo apt-get remove -y azure-cli google-cloud-sdk hhvm google-chrome-stable firefox powershell mono-devel
         sudo apt-get autoremove -y
         sudo apt-get clean
-        df -h
         rm -rf /usr/share/dotnet/
         df -h
         docker rmi `docker images -q`
@@ -87,7 +86,6 @@ jobs:
     - name: Roomservice
       run: |
         PATH=~/bin:$PATH        
-        ls -a
         sudo wget -P /.repo/local_manifests https://github.com/willwex/twrp_device_oppo_lahaina/blob/master/local_manifests/roomservice.xml
         
     - name: Repo Sync
