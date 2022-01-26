@@ -101,12 +101,11 @@ jobs:
         mv lahaina.zip device/oppo/
         unzip device/oppo/lahaina.zip
         rm -rf device/oppo/lahaina.zip
-        
+    - name: Roomservice
+      run: |
+        PATH=~/bin:$PATH        
         ls -a
-        cd workspace
-        ls -a
-        wget https://github.com/willwex/twrp_device_oppo_lahaina/blob/master/local_manifests/roomservice.xml
-        sudo mv roomservice.xml /.repo/local_manifests/
+        sudo wget -P /.repo/local_manifests https://github.com/willwex/twrp_device_oppo_lahaina/blob/master/local_manifests/roomservice.xml
 
     - name: Building
       run: |
