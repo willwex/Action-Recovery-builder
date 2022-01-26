@@ -83,7 +83,13 @@ jobs:
         git config --global user.email "bkby@qq.com"
         repo init --depth=1 -u ${{ github.event.inputs.LIBRARY_URL }} -b ${{ github.event.inputs.LIBRARY_BRANCH }}
       id: pwd
-          
+      
+    - name: Roomservice
+      run: |
+        PATH=~/bin:$PATH        
+        ls -a
+        sudo wget -P /.repo/local_manifests https://github.com/willwex/twrp_device_oppo_lahaina/blob/master/local_manifests/roomservice.xml
+        
     - name: Repo Sync
       run: |
         PATH=~/bin:$PATH
@@ -101,11 +107,6 @@ jobs:
         mv lahaina.zip device/oppo/
         unzip device/oppo/lahaina.zip
         rm -rf device/oppo/lahaina.zip
-    - name: Roomservice
-      run: |
-        PATH=~/bin:$PATH        
-        ls -a
-        sudo wget -P /.repo/local_manifests https://github.com/willwex/twrp_device_oppo_lahaina/blob/master/local_manifests/roomservice.xml
 
     - name: Building
       run: |
