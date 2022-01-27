@@ -87,7 +87,7 @@ jobs:
       run: |
         #PATH=~/bin:$PATH        
         #cd workspace
-        #sudo wget -P .repo/local_manifests https://raw.githubusercontent.com/willwex/twrp_device_oppo_lahaina/master/local_manifests/roomservice.xml
+        #sudo wget -P .repo/local_manifests https://github.com/willwex/twrp_device_oppo_lahaina/raw/main/local_manifests/roomservice.xml
         
     - name: Repo Sync
       run: |
@@ -99,10 +99,10 @@ jobs:
       run: |
         PATH=~/bin:$PATH
         cd ${{ steps.pwd.outputs.pwd }}
-        wget https://github.com/willwex/twrp_device_oppo_lahaina/raw/master/local_manifests/lahaina.zip
-        #cd device
-        #mkdir oppo
-        #cd ..
+        wget https://github.com/willwex/twrp_device_oppo_lahaina/raw/main/local_manifests/lahaina.zip
+        cd device
+        mkdir oppo
+        cd ..
         mv lahaina.zip device/oppo/
         unzip device/oppo/lahaina.zip
         rm -rf device/oppo/lahaina.zip
