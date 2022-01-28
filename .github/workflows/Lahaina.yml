@@ -100,7 +100,6 @@ jobs:
         PATH=~/bin:$PATH
         cd ${{ steps.pwd.outputs.pwd }}
         cd device
-        mkdir oppo
         cd oppo
         git clone https://github.com/willwex/twrp_device_oppo_lahaina lahaina
 
