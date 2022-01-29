@@ -88,6 +88,7 @@ jobs:
         PATH=~/bin:$PATH        
         cd workspace
         sudo wget -P .repo/local_manifests https://github.com/willwex/twrp_device_oppo_lahaina/raw/main/local_manifests/roomservice.xml
+        sudo chmod 777 -R .repo
         
     - name: Repo Sync
       run: |
