@@ -101,7 +101,10 @@ jobs:
         cd ${{ steps.pwd.outputs.pwd }}
         cd device
         cd oppo
-        git clone https://github.com/willwex/twrp_device_oppo_lahaina lahaina
+        git clone --no-checkout https://github.com/willwex/twrp_device_oppo_lahaina.git temp
+        mv temp/.git .
+        rmdir temp
+        git reset --hard HEAD
 
     - name: Building
       run: |
