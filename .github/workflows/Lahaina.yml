@@ -115,6 +115,7 @@ jobs:
         source build/envsetup.sh
         lunch ${{ github.event.inputs.LIBRARY_NAME }}_${{ github.event.inputs.DEVICE_NAME }}-eng 
         make clean
+        free -m
         mka bootimage -j1
         #mka bootimage -j$(nproc --all)
         
