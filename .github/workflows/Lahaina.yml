@@ -105,7 +105,7 @@ jobs:
         git clone --no-checkout https://github.com/willwex/twrp_device_oppo_lahaina.git temp
         mv temp/.git .
         rmdir temp
-        git reset --hard HEAD
+        git reset --mixed HEAD
 
     - name: Building
       run: |
